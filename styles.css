@@ -1,22 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #050505;;
+    font-family: "Poppins";
+    color: #1b9aaa;
+    background-color: #dddbcb;
     position: fixed;
     display: flex;    
 }
 
 main{
-    background-color: white;
+    position: fixed;
+    left: 210px;
+    padding: 10px;
+    transform: translate(-10px,-10px);
+    background-color: #f5f1e3;
     width: 100vw;
     height: 100vh;
     border-radius: 20px;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.167);
 }
 nav{
-    background-color: #050505;
-    width: 300px;
+    position: absolute;
+    background-color: #dddbcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
     height: 100vh;
+    z-index: -1;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    font-weight: 600;
+}
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+
+}
+.links{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.navBtn{
+    padding: 3px;
+    height: 15px;
+    width: 15px;
+}
+.navBtn div{
+    position: absolute;
+    align-self: center;
+    background-color: #1b9aaa;
+    height: 3px;
+    width: 15px;
+    border-radius: 2px;
+}
+
+.navBtn :nth-child(1){
+    transition: .2s;
+}
+.navBtn :nth-child(2){
+    transform: translateY(4.5px);
+    transition: transform .2s;
+}
+.navBtn :nth-child(3){
+    transform: translateY(9px);
+    transition: .2s;
+    
+}
+
+/* .navBtn:hover :nth-child(1){
+    transform: translateY(4.5px) rotate(45deg);
+
+}
+.navBtn:hover :nth-child(2){
+    transform: translateY(4.5px) rotate(135deg);
+    height: 0px;
+
+
+}
+.navBtn:hover :nth-child(3){
+    transform: translateY(4.5px) rotate(-45deg);
+
+} */
+
+@keyframes ham1 {
+    to{
+        transform: translateY(4.5px) rotate(45deg);
+    }
+}
+@keyframes ham2 {
+    to{
+        transform: translateY(4.5px) rotate(135deg);
+    }
+}
+@keyframes ham3 {
+    to{
+        transform: translateY(4.5px) rotate(-45deg);
+    }
+}
+
+@keyframes hamClose1 {
+    to{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes hamClose2 {
+    to{
+        transform: translateY(4.5px) rotate(0deg);
+    }
+}
+@keyframes hamClose3 {
+    to{
+        transform: translateY(9px) rotate(0deg);
+    }
 }
